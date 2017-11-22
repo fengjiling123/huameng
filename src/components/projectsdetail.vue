@@ -25,7 +25,8 @@
 				</div>
 			</div>
 			<div class="yax">
-			应征			<div>
+				<div>
+				应征			
 			：{{projectsdetail.signupCount}}人
 				</div>
 				<div>
@@ -89,8 +90,10 @@ export default {
   				                                   
   	},
   	tag(){
-  		
-  		return this.projectsdetail.tag.split(',')
+  		if(this.projectsdetail.tag){
+  			return this.projectsdetail.tag.split(',')
+  		}
+  		return []
   			
   	
   		

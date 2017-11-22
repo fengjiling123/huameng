@@ -3,6 +3,7 @@
 		<div class="content-padded">
 			<div v-for='data,index in projectsdata' :key='data.id' @click='projectsdetail(data.id)'>
 				<h3>{{data.id}}、{{data.title}}</h3>
+
 				<p class="tag">
 					<span>{{type[index]}}</span>
 					<span v-for='tagdata in tag[index]'>
@@ -37,6 +38,7 @@
 			<a class="left" @click='uppage' id='uppage'><上一页</a>
 			<a class="right" @click='downpage' id='downpage'>下一页></a>
 		</div>
+
 	</div>
 </template>
 
@@ -75,12 +77,13 @@ export default {
   	  	tag(){
   	  		var tagarr=[]
   	  		for(var i=0;i<this.projectsdata.length;i++){
-  	  			if(this.projectsdata[i].tag.indexOf(",")!=-1){
-  	  				tagarr.push(this.projectsdata[i].tag.split(','))
+  	  			if(this.projectsdata[i].tag){
+	  	  			tagarr.push(this.projectsdata[i].tag.split(','))
   	  			}else{
   	  				tagarr.push([])
   	  			}
-  	  			//tagarr.push(this.projectsdata[i].tag.split(','))
+  	  			
+  	  			
   	  		}
   	  		return tagarr
   	  	},
