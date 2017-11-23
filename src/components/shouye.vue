@@ -252,15 +252,16 @@ export default {
   	},
   	tag(){
   		var tagarr=[]
+  		
   		for(var i=0;i<this.indexprojects.length;i++){
-  			//tagarr.push(this.indexprojects[i].tag.split(','))
-  			if(this.indexprojects[i].tag.indexOf(",")!=-1){
-  				
-  				tagarr.push(this.indexprojects[i].tag.split(','))
+  			if(this.indexprojects[i].tag){		
+  			//tagarr.push(this.indexprojects[i].tag.split(','))	  				  				
+	  			tagarr.push(this.indexprojects[i].tag.split(','))	  				  					  			
   			}else{
   				tagarr.push([])
   			}
   		}
+  		
   		return tagarr
   	},
   	number(){
@@ -459,6 +460,8 @@ export default {
 			    font-size: 18px;
 			};
 			.tag{
+				height:22px;
+				overflow:hidden;
 				span{
 					margin-right: 5px;
 					margin-bottom: 2px;

@@ -3,6 +3,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 import axios from 'axios'
 import {Indicator} from 'mint-ui'
+
+
 const store=new Vuex.Store({
 	state:{
 		index:null,

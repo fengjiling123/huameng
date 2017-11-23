@@ -93,7 +93,7 @@ export default {
   		if(this.projectsdetail.tag){
   			return this.projectsdetail.tag.split(',')
   		}
-  		return []
+  		return [] 
   			
   	
   		

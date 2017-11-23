@@ -215,6 +215,8 @@ export default {
 			    font-size: 18px;
 			};
 			.tag{
+				height:22px;
+				overflow:hidden;
 				span{
 					margin-right: 5px;
 					margin-bottom: 2px;
